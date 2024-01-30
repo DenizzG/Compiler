@@ -9,7 +9,6 @@
    the yylval variable. */
 #include "histogram.hpp"
 
-
 // This is to work around an irritating bug in Flex
 // https://stackoverflow.com/questions/46213840/get-rid-of-warning-implicit-declaration-of-function-fileno-in-flex
 extern "C" int fileno(FILE *stream);
@@ -20,11 +19,63 @@ extern "C" int fileno(FILE *stream);
 
 %%
 
-[0-9]+          { fprintf(stderr, "Number : %s\n", yytext); /* TODO: get value out of yytext and into yylval.numberValue */;  return Number; }
+(\[[^\]]*\])          {
+      fprintf(stderr, "Word [] : %s\n", yytext);
+      yytext++;
+      yytext[strlen(yytext)-1] = 0;
+      fprintf(stderr, "Word: %s\n", yytext);
+      std::string* yytext_address = new std::string;
+      *yytext_address = yytext;
+      yylval.wordValue = yytext_address;     
+      return Word;
+      
+}
 
-[a-z]+          { fprintf(stderr, "Word : %s\n", yytext); /* TODO: get value out of yytext and into yylval.wordValue */;  return Word; }
+(-?[0-9]+(\.[0-9]+)?)      {        
 
-\n              { fprintf(stderr, "Newline\n"); }
+   fprintf(stderr, "Number (double) : %s\n", yytext);
+   yylval.numberValue = strtod(yytext, NULL);
+   return Number;
+}
+
+
+(-?[0-9]+(\/[0-9]+))       {   
+   
+   fprintf(stderr, "Number (fraction) : %s\n", yytext);  
+   std::string numerator;
+   std::string denominator;
+   bool dash = false;
+   for (size_t i = 0; i < strlen(yytext); i++){
+      if (yytext[i] == '/'){
+         dash = true;
+      }
+      else if (dash == false){
+         numerator += yytext[i];
+      }
+      else {
+         denominator += yytext[i];
+      }
+   }
+   yylval.numberValue = (strtod(numerator.c_str(), NULL)/strtod(denominator.c_str(), NULL));
+   return Number;
+
+}
+
+
+(([a-zA-Z])+)          {
+
+   fprintf(stderr, "Word: %s\n", yytext);
+   std::string* yytext_address = new std::string;
+   *yytext_address = yytext;
+   yylval.wordValue = yytext_address;     
+   return Word;
+}
+ 
+[ ]*     {;}
+
+.        {;}
+
+\n        { fprintf(stderr, "Newline\n"); }
 
 
 %%
