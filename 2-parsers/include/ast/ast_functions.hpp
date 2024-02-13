@@ -49,10 +49,16 @@ public:
         : Function(_arg)
     {}
 
-    virtual const char *getFunction() const
+    virtual const char *getFunction() const override
     { return "log"; }
     
+    virtual double evaluate(const std::map<std::string,double> &bindings) const override {
+        double result = getArg()->evaluate(bindings);
+        return std::log(result);
+    }
     // TODO-E : Override evaluate, and implement it
+
+
 };
 
 class ExpFunction
@@ -65,6 +71,11 @@ public:
 
     virtual const char *getFunction() const
     { return "exp"; }
+
+    virtual double evaluate( const std::map<std::string,double> &bindings) const override {
+        double result = getArg()->evaluate(bindings);
+        return std::exp(result);
+    }
 };
 
 class SqrtFunction
@@ -77,6 +88,11 @@ public:
 
     virtual const char *getFunction() const
     { return "sqrt"; }
+
+    virtual double evaluate( const std::map<std::string,double> &bindings) const override {
+        double result = getArg()->evaluate(bindings);
+        return std::sqrt(result);
+    }
 };
 
 

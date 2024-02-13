@@ -50,7 +50,8 @@ public:
     ) const override
     {
         // TODO-F: Implement this similar to how AddOperator was implemented.
-        throw std::runtime_error("NegOperator::evaluate is not implemented.");
+        double result = getExpr()->evaluate(bindings);
+        return (result *(-1));
     }
 };
 
