@@ -1,0 +1,30 @@
+param _branchval_2 0
+const _zero_3 0
+beq _branchval_2 _zero_3 _equalzero_4
+param _branchval_1 1
+bne _branchval_2 _zero_3 _end_5
+:_equalzero_4
+param _branchval_1 2
+:_end_5
+const _zero_6 0
+beq _branchval_1 _zero_6 _equalzero_7
+param _branchval_9 3
+const _zero_10 0
+beq _branchval_9 _zero_10 _equalzero_11
+param _res_0 4
+bne _branchval_9 _zero_10 _end_12
+:_equalzero_11
+param _res_0 5
+:_end_12
+bne _branchval_1 _zero_6 _end_8
+:_equalzero_7
+param _branchval_13 6
+const _zero_14 0
+beq _branchval_13 _zero_14 _equalzero_15
+param _res_0 7
+bne _branchval_13 _zero_14 _end_16
+:_equalzero_15
+param _res_0 8
+:_end_16
+:_end_8
+halt _res_0

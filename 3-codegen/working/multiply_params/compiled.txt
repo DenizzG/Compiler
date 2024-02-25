@@ -1,0 +1,34 @@
+const _zero_1 0
+param _res_0 0
+add a _res_0 _zero_1
+const _zero_2 0
+param _res_0 1
+add b _res_0 _zero_2
+const _zero_3 0
+const _res_0 0
+add acc _res_0 _zero_3
+const _zero_4 0
+add _res_0 b _zero_4
+const _zero_5 0
+beq _res_0 _zero_5 _iszero_6
+:_nonzero_7
+const _zero_8 0
+const _zero_11 0
+add _val1_9 acc _zero_11
+const _zero_12 0
+add _val2_10 a _zero_12
+add _res_0 _val1_9 _val2_10
+add acc _res_0 _zero_8
+const _zero_13 0
+const _zero_16 0
+add _val1_14 b _zero_16
+const _val2_15 -1
+add _res_0 _val1_14 _val2_15
+add b _res_0 _zero_13
+const _zero_17 0
+add _res_0 b _zero_17
+bne _res_0 _zero_5 _nonzero_7
+:_iszero_6
+const _zero_18 0
+add _res_0 acc _zero_18
+halt _res_0

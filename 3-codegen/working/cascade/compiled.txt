@@ -1,0 +1,44 @@
+const _zero_1 0
+const _res_0 0
+add x _res_0 _zero_1
+const _zero_2 0
+const _res_0 1
+add y _res_0 _zero_2
+const _zero_6 0
+add _val1_4 x _zero_6
+const _val2_5 1
+add _branchval_3 _val1_4 _val2_5
+const _zero_7 0
+beq _branchval_3 _zero_7 _equalzero_8
+const _zero_11 0
+add _branchval_10 y _zero_11
+const _zero_12 0
+beq _branchval_10 _zero_12 _equalzero_13
+const _zero_15 0
+add _res_0 x _zero_15
+const _zero_16 0
+beq _res_0 _zero_16 _iszero_17
+:_nonzero_18
+const _zero_19 0
+const _res_0 1
+add x _res_0 _zero_19
+const _zero_20 0
+add _res_0 x _zero_20
+bne _res_0 _zero_16 _nonzero_18
+:_iszero_17
+const _zero_21 0
+const _res_0 2
+add x _res_0 _zero_21
+bne _branchval_10 _zero_12 _end_14
+:_equalzero_13
+const _res_0 4
+:_end_14
+bne _branchval_3 _zero_7 _end_9
+:_equalzero_8
+const _zero_22 0
+const _res_0 3
+add x _res_0 _zero_22
+:_end_9
+const _zero_23 0
+add _res_0 x _zero_23
+halt _res_0

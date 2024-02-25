@@ -1,0 +1,58 @@
+const _zero_1 0
+const _res_0 0
+add x _res_0 _zero_1
+const _zero_2 0
+const _res_0 0
+add z _res_0 _zero_2
+const _zero_5 0
+add _val1_3 z _zero_5
+const _val2_4 4
+lt _res_0 _val1_3 _val2_4
+const _zero_6 0
+beq _res_0 _zero_6 _iszero_7
+:_nonzero_8
+const _zero_9 0
+const _res_0 0
+add i _res_0 _zero_9
+const _zero_12 0
+add _val1_10 i _zero_12
+const _val2_11 5
+lt _res_0 _val1_10 _val2_11
+const _zero_13 0
+beq _res_0 _zero_13 _iszero_14
+:_nonzero_15
+const _zero_16 0
+const _zero_19 0
+add _val1_17 x _zero_19
+const _zero_20 0
+add _val2_18 z _zero_20
+add _res_0 _val1_17 _val2_18
+add x _res_0 _zero_16
+const _zero_21 0
+const _zero_24 0
+add _val1_22 i _zero_24
+const _val2_23 1
+add _res_0 _val1_22 _val2_23
+add i _res_0 _zero_21
+const _zero_27 0
+add _val1_25 i _zero_27
+const _val2_26 5
+lt _res_0 _val1_25 _val2_26
+bne _res_0 _zero_13 _nonzero_15
+:_iszero_14
+const _zero_28 0
+add _res_0 x _zero_28
+output _res_0
+const _zero_29 0
+const _zero_32 0
+add _val1_30 z _zero_32
+const _val2_31 1
+add _res_0 _val1_30 _val2_31
+add z _res_0 _zero_29
+const _zero_35 0
+add _val1_33 z _zero_35
+const _val2_34 4
+lt _res_0 _val1_33 _val2_34
+bne _res_0 _zero_6 _nonzero_8
+:_iszero_7
+halt _res_0

@@ -1,0 +1,18 @@
+Src: const _res_0 0
+Src: const _zero_1 0
+Src: beq _res_0 _zero_1 _iszero_2
+Src: :_nonzero_3
+Src: const _res_0 1
+Src: const _res_0 0
+Src: bne _res_0 _zero_1 _nonzero_3
+Src: :_iszero_2
+Src: const _res_0 17
+Src: halt _res_0
+Exec 0:const _res_0 0, {}
+Exec 1:const _zero_1 0, { _res_0:0}
+Exec 2:, { _res_0:0 _zero_1:0}
+getReg(_res_0)
+getReg(_zero_1)
+Exec 6:const _res_0 17, { _res_0:0 _zero_1:0}
+Exec 7:, { _res_0:17 _zero_1:0}
+getReg(_res_0)

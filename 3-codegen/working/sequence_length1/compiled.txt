@@ -1,0 +1,3 @@
+const _res_0 11
+output _res_0
+halt _res_0

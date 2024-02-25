@@ -1,0 +1,17 @@
+Src: const _zero_1 0
+Src: const _res_0 10
+Src: add x _res_0 _zero_1
+Src: const _zero_2 0
+Src: add _res_0 x _zero_2
+Src: halt _res_0
+Exec 0:const _zero_1 0, {}
+Exec 1:const _res_0 10, { _zero_1:0}
+Exec 2:add x _res_0 _zero_1, { _res_0:10 _zero_1:0}
+getReg(_res_0)
+getReg(_zero_1)
+Exec 3:const _zero_2 0, { _res_0:10 _zero_1:0 x:10}
+Exec 4:add _res_0 x _zero_2, { _res_0:10 _zero_1:0 _zero_2:0 x:10}
+getReg(x)
+getReg(_zero_2)
+Exec 5:, { _res_0:10 _zero_1:0 _zero_2:0 x:10}
+getReg(_res_0)

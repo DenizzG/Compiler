@@ -1,0 +1,80 @@
+Src: const _zero_1 0
+Src: const _res_0 10
+Src: add x _res_0 _zero_1
+Src: const _zero_2 0
+Src: const _res_0 11
+Src: add y _res_0 _zero_2
+Src: const _zero_3 0
+Src: const _res_0 10
+Src: add z _res_0 _zero_3
+Src: const _zero_4 0
+Src: const _zero_7 0
+Src: add _val1_5 x _zero_7
+Src: const _zero_8 0
+Src: add _val2_6 y _zero_8
+Src: add _res_0 _val1_5 _val2_6
+Src: add x _res_0 _zero_4
+Src: const _zero_9 0
+Src: const _zero_12 0
+Src: add _val1_10 x _zero_12
+Src: const _zero_13 0
+Src: add _val2_11 z _zero_13
+Src: add _res_0 _val1_10 _val2_11
+Src: add z _res_0 _zero_9
+Src: const _zero_14 0
+Src: add _res_0 z _zero_14
+Src: output _res_0
+Src: halt _res_0
+Exec 0:const _zero_1 0, {}
+Exec 1:const _res_0 10, { _zero_1:0}
+Exec 2:add x _res_0 _zero_1, { _res_0:10 _zero_1:0}
+getReg(_res_0)
+getReg(_zero_1)
+Exec 3:const _zero_2 0, { _res_0:10 _zero_1:0 x:10}
+Exec 4:const _res_0 11, { _res_0:10 _zero_1:0 _zero_2:0 x:10}
+Exec 5:add y _res_0 _zero_2, { _res_0:11 _zero_1:0 _zero_2:0 x:10}
+getReg(_res_0)
+getReg(_zero_2)
+Exec 6:const _zero_3 0, { _res_0:11 _zero_1:0 _zero_2:0 x:10 y:11}
+Exec 7:const _res_0 10, { _res_0:11 _zero_1:0 _zero_2:0 _zero_3:0 x:10 y:11}
+Exec 8:add z _res_0 _zero_3, { _res_0:10 _zero_1:0 _zero_2:0 _zero_3:0 x:10 y:11}
+getReg(_res_0)
+getReg(_zero_3)
+Exec 9:const _zero_4 0, { _res_0:10 _zero_1:0 _zero_2:0 _zero_3:0 x:10 y:11 z:10}
+Exec 10:const _zero_7 0, { _res_0:10 _zero_1:0 _zero_2:0 _zero_3:0 _zero_4:0 x:10 y:11 z:10}
+Exec 11:add _val1_5 x _zero_7, { _res_0:10 _zero_1:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 x:10 y:11 z:10}
+getReg(x)
+getReg(_zero_7)
+Exec 12:const _zero_8 0, { _res_0:10 _val1_5:10 _zero_1:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 x:10 y:11 z:10}
+Exec 13:add _val2_6 y _zero_8, { _res_0:10 _val1_5:10 _zero_1:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 x:10 y:11 z:10}
+getReg(y)
+getReg(_zero_8)
+Exec 14:add _res_0 _val1_5 _val2_6, { _res_0:10 _val1_5:10 _val2_6:11 _zero_1:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 x:10 y:11 z:10}
+getReg(_val1_5)
+getReg(_val2_6)
+Exec 15:add x _res_0 _zero_4, { _res_0:21 _val1_5:10 _val2_6:11 _zero_1:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 x:10 y:11 z:10}
+getReg(_res_0)
+getReg(_zero_4)
+Exec 16:const _zero_9 0, { _res_0:21 _val1_5:10 _val2_6:11 _zero_1:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 x:21 y:11 z:10}
+Exec 17:const _zero_12 0, { _res_0:21 _val1_5:10 _val2_6:11 _zero_1:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 _zero_9:0 x:21 y:11 z:10}
+Exec 18:add _val1_10 x _zero_12, { _res_0:21 _val1_5:10 _val2_6:11 _zero_1:0 _zero_12:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 _zero_9:0 x:21 y:11 z:10}
+getReg(x)
+getReg(_zero_12)
+Exec 19:const _zero_13 0, { _res_0:21 _val1_10:21 _val1_5:10 _val2_6:11 _zero_1:0 _zero_12:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 _zero_9:0 x:21 y:11 z:10}
+Exec 20:add _val2_11 z _zero_13, { _res_0:21 _val1_10:21 _val1_5:10 _val2_6:11 _zero_1:0 _zero_12:0 _zero_13:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 _zero_9:0 x:21 y:11 z:10}
+getReg(z)
+getReg(_zero_13)
+Exec 21:add _res_0 _val1_10 _val2_11, { _res_0:21 _val1_10:21 _val1_5:10 _val2_11:10 _val2_6:11 _zero_1:0 _zero_12:0 _zero_13:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 _zero_9:0 x:21 y:11 z:10}
+getReg(_val1_10)
+getReg(_val2_11)
+Exec 22:add z _res_0 _zero_9, { _res_0:31 _val1_10:21 _val1_5:10 _val2_11:10 _val2_6:11 _zero_1:0 _zero_12:0 _zero_13:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 _zero_9:0 x:21 y:11 z:10}
+getReg(_res_0)
+getReg(_zero_9)
+Exec 23:const _zero_14 0, { _res_0:31 _val1_10:21 _val1_5:10 _val2_11:10 _val2_6:11 _zero_1:0 _zero_12:0 _zero_13:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 _zero_9:0 x:21 y:11 z:31}
+Exec 24:add _res_0 z _zero_14, { _res_0:31 _val1_10:21 _val1_5:10 _val2_11:10 _val2_6:11 _zero_1:0 _zero_12:0 _zero_13:0 _zero_14:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 _zero_9:0 x:21 y:11 z:31}
+getReg(z)
+getReg(_zero_14)
+Exec 25:, { _res_0:31 _val1_10:21 _val1_5:10 _val2_11:10 _val2_6:11 _zero_1:0 _zero_12:0 _zero_13:0 _zero_14:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 _zero_9:0 x:21 y:11 z:31}
+getReg(_res_0)
+Exec 26:, { _res_0:31 _val1_10:21 _val1_5:10 _val2_11:10 _val2_6:11 _zero_1:0 _zero_12:0 _zero_13:0 _zero_14:0 _zero_2:0 _zero_3:0 _zero_4:0 _zero_7:0 _zero_8:0 _zero_9:0 x:21 y:11 z:31}
+getReg(_res_0)

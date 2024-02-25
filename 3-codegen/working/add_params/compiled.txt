@@ -1,0 +1,12 @@
+const _zero_1 0
+param _res_0 0
+add a _res_0 _zero_1
+const _zero_2 0
+param _res_0 1
+add b _res_0 _zero_2
+const _zero_5 0
+add _val1_3 a _zero_5
+const _zero_6 0
+add _val2_4 b _zero_6
+add _res_0 _val1_3 _val2_4
+halt _res_0

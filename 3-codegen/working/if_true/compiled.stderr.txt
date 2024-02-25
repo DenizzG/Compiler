@@ -1,0 +1,20 @@
+Src: param _branchval_1 0
+Src: const _zero_2 0
+Src: beq _branchval_1 _zero_2 _equalzero_3
+Src: param _res_0 1
+Src: bne _branchval_1 _zero_2 _end_4
+Src: :_equalzero_3
+Src: param _res_0 2
+Src: :_end_4
+Src: halt _res_0
+Exec 0:param _branchval_1 0, {}
+Exec 1:const _zero_2 0, { _branchval_1:3}
+Exec 2:, { _branchval_1:3 _zero_2:0}
+getReg(_branchval_1)
+getReg(_zero_2)
+Exec 3:param _res_0 1, { _branchval_1:3 _zero_2:0}
+Exec 4:, { _branchval_1:3 _res_0:6 _zero_2:0}
+getReg(_branchval_1)
+getReg(_zero_2)
+Exec 6:, { _branchval_1:3 _res_0:6 _zero_2:0}
+getReg(_res_0)

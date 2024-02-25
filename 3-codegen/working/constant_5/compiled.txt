@@ -1,0 +1,2 @@
+const _res_0 5
+halt _res_0

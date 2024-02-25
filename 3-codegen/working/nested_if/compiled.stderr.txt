@@ -1,0 +1,57 @@
+Src: param _branchval_2 0
+Src: const _zero_3 0
+Src: beq _branchval_2 _zero_3 _equalzero_4
+Src: param _branchval_1 1
+Src: bne _branchval_2 _zero_3 _end_5
+Src: :_equalzero_4
+Src: param _branchval_1 2
+Src: :_end_5
+Src: const _zero_6 0
+Src: beq _branchval_1 _zero_6 _equalzero_7
+Src: param _branchval_9 3
+Src: const _zero_10 0
+Src: beq _branchval_9 _zero_10 _equalzero_11
+Src: param _res_0 4
+Src: bne _branchval_9 _zero_10 _end_12
+Src: :_equalzero_11
+Src: param _res_0 5
+Src: :_end_12
+Src: bne _branchval_1 _zero_6 _end_8
+Src: :_equalzero_7
+Src: param _branchval_13 6
+Src: const _zero_14 0
+Src: beq _branchval_13 _zero_14 _equalzero_15
+Src: param _res_0 7
+Src: bne _branchval_13 _zero_14 _end_16
+Src: :_equalzero_15
+Src: param _res_0 8
+Src: :_end_16
+Src: :_end_8
+Src: halt _res_0
+Exec 0:param _branchval_2 0, {}
+Exec 1:const _zero_3 0, { _branchval_2:1}
+Exec 2:, { _branchval_2:1 _zero_3:0}
+getReg(_branchval_2)
+getReg(_zero_3)
+Exec 3:param _branchval_1 1, { _branchval_2:1 _zero_3:0}
+Exec 4:, { _branchval_1:1 _branchval_2:1 _zero_3:0}
+getReg(_branchval_2)
+getReg(_zero_3)
+Exec 6:const _zero_6 0, { _branchval_1:1 _branchval_2:1 _zero_3:0}
+Exec 7:, { _branchval_1:1 _branchval_2:1 _zero_3:0 _zero_6:0}
+getReg(_branchval_1)
+getReg(_zero_6)
+Exec 8:param _branchval_9 3, { _branchval_1:1 _branchval_2:1 _zero_3:0 _zero_6:0}
+Exec 9:const _zero_10 0, { _branchval_1:1 _branchval_2:1 _branchval_9:3 _zero_3:0 _zero_6:0}
+Exec 10:, { _branchval_1:1 _branchval_2:1 _branchval_9:3 _zero_10:0 _zero_3:0 _zero_6:0}
+getReg(_branchval_9)
+getReg(_zero_10)
+Exec 11:param _res_0 4, { _branchval_1:1 _branchval_2:1 _branchval_9:3 _zero_10:0 _zero_3:0 _zero_6:0}
+Exec 12:, { _branchval_1:1 _branchval_2:1 _branchval_9:3 _res_0:4 _zero_10:0 _zero_3:0 _zero_6:0}
+getReg(_branchval_9)
+getReg(_zero_10)
+Exec 14:, { _branchval_1:1 _branchval_2:1 _branchval_9:3 _res_0:4 _zero_10:0 _zero_3:0 _zero_6:0}
+getReg(_branchval_1)
+getReg(_zero_6)
+Exec 21:, { _branchval_1:1 _branchval_2:1 _branchval_9:3 _res_0:4 _zero_10:0 _zero_3:0 _zero_6:0}
+getReg(_res_0)

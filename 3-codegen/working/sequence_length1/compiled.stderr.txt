@@ -1,0 +1,8 @@
+Src: const _res_0 11
+Src: output _res_0
+Src: halt _res_0
+Exec 0:const _res_0 11, {}
+Exec 1:, { _res_0:11}
+getReg(_res_0)
+Exec 2:, { _res_0:11}
+getReg(_res_0)

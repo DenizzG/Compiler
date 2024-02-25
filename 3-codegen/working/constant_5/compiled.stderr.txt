@@ -1,0 +1,5 @@
+Src: const _res_0 5
+Src: halt _res_0
+Exec 0:const _res_0 5, {}
+Exec 1:, { _res_0:5}
+getReg(_res_0)

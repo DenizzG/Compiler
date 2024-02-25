@@ -1,0 +1,29 @@
+const _zero_1 0
+input _res_0
+add i _res_0 _zero_1
+const _zero_2 0
+add _res_0 i _zero_2
+const _zero_3 0
+beq _res_0 _zero_3 _iszero_4
+:_nonzero_5
+const _zero_9 0
+add _val1_7 i _zero_9
+const _val2_8 16
+lt _branchval_6 _val1_7 _val2_8
+const _zero_10 0
+beq _branchval_6 _zero_10 _equalzero_11
+const _zero_13 0
+add _res_0 i _zero_13
+output _res_0
+bne _branchval_6 _zero_10 _end_12
+:_equalzero_11
+const _res_0 10
+:_end_12
+const _zero_14 0
+input _res_0
+add i _res_0 _zero_14
+const _zero_15 0
+add _res_0 i _zero_15
+bne _res_0 _zero_3 _nonzero_5
+:_iszero_4
+halt _res_0
